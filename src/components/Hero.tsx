@@ -30,7 +30,7 @@ const Hero = () => {
           className="font-display text-6xl sm:text-8xl lg:text-9xl tracking-wider text-foreground leading-none mb-4 opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.4s" }}
         >
-          INK<span className="text-primary">.</span>MASTER
+          INK<span className="text-primary">.</span>Gallery20
         </h1>
         <p
           className="font-body text-lg sm:text-xl text-muted-foreground tracking-widest uppercase mb-12 opacity-0 animate-fade-in"

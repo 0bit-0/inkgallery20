@@ -24,7 +24,7 @@ const About = () => {
               The <span className="text-primary">Artist</span>
             </h2>
             <p className="text-xs tracking-widest uppercase text-primary font-body mb-6">
-              Marcus Vale — 12+ Years of Experience
+              Sidhu — 1.5+ Years of Experience
             </p>
             <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed">
               <p>
@@ -47,7 +47,7 @@ const About = () => {
 
             <div className="grid grid-cols-3 gap-6 mt-8 pt-8 border-t border-border">
               <div>
-                <span className="font-display text-3xl text-primary">12+</span>
+                <span className="font-display text-3xl text-primary">1.5+</span>
                 <p className="text-xs text-muted-foreground font-body mt-1 uppercase tracking-wider">Years</p>
               </div>
               <div>
