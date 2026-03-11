@@ -101,10 +101,10 @@ const Contact = () => {
               <h3 className="font-display text-xl text-foreground tracking-wider mb-4">Get in Touch</h3>
               <div className="space-y-3">
                 <a href="https://instagram.com/ink.gallery20" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body text-sm">
-                  <Instagram size={18} /> @inkmaster.studio
+                  <Instagram size={18} /> @ink.gallery20
                 </a>
                 <a href="sidhuphambianwala17@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body text-sm">
-                  <Mail size={18} /> book@inkmaster.studio
+                  <Mail size={18} /> book@inkgallery20.studio
                 </a>
                 <a href="https://wa.me/919872387746" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body text-sm">
                   <Phone size={18} /> WhatsApp
@@ -118,8 +118,8 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-display text-xl text-foreground tracking-wider mb-2">Location</h3>
-              <p className="font-body text-sm text-muted-foreground">247 Ink Street, Brooklyn</p>
-              <p className="font-body text-sm text-muted-foreground">New York, NY 11211</p>
+              <p className="font-body text-sm text-muted-foreground">Hoshiarpur, 146001</p>
+              <p className="font-body text-sm text-muted-foreground">Punjab, India</p>
             </div>
           </div>
         </div>

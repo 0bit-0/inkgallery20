@@ -1,5 +1,5 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import artistPortrait from "@/assets/artist-portrait.jpg";
+import artistPortrait from "@/assets/Spw20.jpeg";
 
 const About = () => {
   const ref = useFadeIn();
@@ -28,18 +28,18 @@ const About = () => {
             </p>
             <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed">
               <p>
-                With over a decade behind the needle, Marcus Vale has built a reputation for
+                With over a decade behind the needle, Sidhu has built a reputation for
                 precision, artistry, and a deeply personal approach to every piece. Trained in
                 fine arts before discovering tattooing, his work bridges the gap between
                 classical technique and contemporary edge.
               </p>
               <p>
                 Specializing in blackwork, geometric patterns, and hyper-realistic portraits,
-                Marcus treats every tattoo as a collaboration — listening to your story and
+                Sidhu treats every tattoo as a collaboration — listening to your story and
                 translating it into permanent art that you'll carry with pride.
               </p>
               <p>
-                Based in a private studio in Brooklyn, NY, Marcus maintains the highest
+                Based in a private studio in Hoshiarpur, Punjab, Sidhu maintains the highest
                 standards of hygiene and uses only premium, vegan-friendly inks. Certified
                 by the Alliance of Professional Tattooists.
               </p>

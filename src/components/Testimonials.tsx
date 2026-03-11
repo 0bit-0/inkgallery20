@@ -3,17 +3,17 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah K.",
-    text: "Marcus turned my rough concept into the most beautiful sleeve I could have imagined. His attention to detail is insane. Every line is perfect.",
+    name: "Arshdeep Singh.",
+    text: "Sidhu turned my rough concept into the most beautiful sleeve I could have imagined. His attention to detail is insane. Every line is perfect.",
     rating: 5,
   },
   {
     name: "James R.",
-    text: "I've been tattooed by artists all over the world, and Marcus is hands-down the best. The realism in my portrait piece still blows people away.",
+    text: "I've been tattooed by artists all over the world, and Sidhu is hands-down the best. The realism in my portrait piece still blows people away.",
     rating: 5,
   },
   {
-    name: "Mia T.",
+    name: "Ritik Kataria.",
     text: "The studio is immaculate, the vibe is calm and professional, and the art speaks for itself. Wouldn't trust anyone else with my ink.",
     rating: 5,
   },
