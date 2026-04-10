@@ -39,7 +39,7 @@ const About = () => {
                 translating it into permanent art that you'll carry with pride.
               </p>
               <p>
-                Based in a private studio in Hoshiarpur, Punjab, Sidhu maintains the highest
+                Based in a private studio in Tanda, Punjab &#40;146116&#41;, Sidhu maintains the highest
                 standards of hygiene and uses only premium, vegan-friendly inks. Certified
                 by the Alliance of Professional Tattooists.
               </p>

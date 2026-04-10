@@ -2,8 +2,13 @@ import { useState } from "react";
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { Instagram, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+
+  const formRef = useRef<HTMLFormElement | null>(null);
+
   const ref = useFadeIn();
   const [form, setForm] = useState({
     name: "",
@@ -13,15 +18,34 @@ const Contact = () => {
     size: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.idea) {
-      toast.error("Please fill in all required fields.");
-      return;
-    }
-    toast.success("Request submitted! We'll be in touch within 48 hours.");
-    setForm({ name: "", email: "", idea: "", placement: "", size: "" });
-  };
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!form.name || !form.email || !form.idea) {
+    toast.error("Please fill in all required fields.");
+    return;
+  }
+
+  if (!formRef.current) return;
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      () => {
+        toast.success("Request submitted! We'll be in touch within 48 hours.");
+        setForm({ name: "", email: "", idea: "", placement: "", size: "" });
+      },
+      (error) => {
+        console.error(error);
+        toast.error("Failed to send request. Try again later.");
+      }
+    );
+};
 
   const inputClasses =
     "w-full bg-secondary border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors";
@@ -40,10 +64,16 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">
-          <form onSubmit={handleSubmit} className="lg:col-span-3 space-y-4" noValidate>
+          <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="lg:col-span-3 space-y-4"
+              noValidate
+            >
             <div className="grid sm:grid-cols-2 gap-4">
               <input
                 type="text"
+                name="from_name"
                 placeholder="Your Name *"
                 aria-label="Your name"
                 value={form.name}
@@ -53,6 +83,7 @@ const Contact = () => {
               />
               <input
                 type="email"
+                name="from_email"
                 placeholder="Your Email *"
                 aria-label="Your email"
                 value={form.email}
@@ -64,6 +95,7 @@ const Contact = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               <input
                 type="text"
+                name="placement"
                 placeholder="Placement (e.g. forearm)"
                 aria-label="Tattoo placement"
                 value={form.placement}
@@ -72,6 +104,7 @@ const Contact = () => {
               />
               <input
                 type="text"
+                name="size"
                 placeholder="Approximate Size"
                 aria-label="Approximate size"
                 value={form.size}
@@ -80,6 +113,7 @@ const Contact = () => {
               />
             </div>
             <textarea
+              name="message"
               placeholder="Describe your tattoo idea... *"
               aria-label="Tattoo idea"
               rows={5}
@@ -87,6 +121,11 @@ const Contact = () => {
               onChange={(e) => setForm({ ...form, idea: e.target.value })}
               className={inputClasses + " resize-none"}
               required
+            />
+            <input
+              type="hidden"
+              name="time"
+              value={new Date().toLocaleString("en-IN")}
             />
             <button
               type="submit"
@@ -104,7 +143,7 @@ const Contact = () => {
                   <Instagram size={18} /> @ink.gallery20
                 </a>
                 <a href="sidhuphambianwala17@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body text-sm">
-                  <Mail size={18} /> book@inkgallery20.studio
+                  <Mail size={18} /> sidhuphambianwala17@gmail.com
                 </a>
                 <a href="https://wa.me/919872387746" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body text-sm">
                   <Phone size={18} /> WhatsApp
@@ -117,11 +156,25 @@ const Contact = () => {
               <p className="font-body text-sm text-muted-foreground">Sun — Mon: By appointment</p>
             </div>
             <div>
-              <h3 className="font-display text-xl text-foreground tracking-wider mb-2">Location</h3>
-              <p className="font-body text-sm text-muted-foreground">Hoshiarpur, 146001</p>
-              <p className="font-body text-sm text-muted-foreground">Punjab, India</p>
-            </div>
+  <h3 className="font-display text-xl text-foreground tracking-wider mb-2">Location</h3>
+  <p className="font-body text-sm text-muted-foreground">Tanda Hoshiarpur Rd, Adda Saran &#40;Kandhala Jattan&#41;,</p>
+  <p className="font-body text-sm text-muted-foreground mb-4">Tanda, Punjab 146116, India</p>
+  <div className="overflow-hidden border border-border rounded-sm">
+    <iframe
+      src="https://www.google.com/maps?q=Tanda+Hoshiarpur+Rd,+Adda+Saran+Kandhala+Jattan,+Tanda,+Punjab+146116,+India&output=embed"
+      width="100%"
+      height="200"
+      style={{ display: "block", border: "none" }}
+      loading="lazy"
+      allowFullScreen
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Studio location map"
+    />
+  </div>
+</div>
           </div>
+
+          
         </div>
       </div>
     </section>

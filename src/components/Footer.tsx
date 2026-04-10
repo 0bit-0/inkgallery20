@@ -8,7 +8,8 @@ const Footer = () => (
           <span className="font-display text-2xl tracking-widest text-foreground">
             INK<span className="text-primary">.</span>Gallery20
           </span>
-          <p className="font-body text-xs text-muted-foreground mt-1">Hoshiarpur, Punjab, India</p>
+          <p className="font-body text-xs text-muted-foreground mt-1">Tanda Hoshiarpur Rd, Adda Saran &#40;Kandhala Jattan&#41;,</p>
+          <p className="font-body text-xs text-muted-foreground mt-1">Tanda, Punjab 146116, India</p>
         </div>
 
         <div className="flex gap-4">
