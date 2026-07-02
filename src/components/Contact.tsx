@@ -160,16 +160,16 @@ const handleSubmit = (e: React.FormEvent) => {
   <p className="font-body text-sm text-muted-foreground">Tanda Hoshiarpur Rd, Adda Saran &#40;Kandhala Jattan&#41;,</p>
   <p className="font-body text-sm text-muted-foreground mb-4">Tanda, Punjab 146116, India</p>
   <div className="overflow-hidden border border-border rounded-sm">
-    <iframe
-      src="https://www.google.com/maps?q=Tanda+Hoshiarpur+Rd,+Adda+Saran+Kandhala+Jattan,+Tanda,+Punjab+146116,+India&output=embed"
-      width="100%"
-      height="200"
-      style={{ display: "block", border: "none" }}
-      loading="lazy"
-      allowFullScreen
-      referrerPolicy="no-referrer-when-downgrade"
-      title="Studio location map"
-    />
+  <iframe
+    src="https://www.google.com/maps?q=Ink+gallery+tattoo+studio+and+academy,+Tanda,+Punjab&output=embed"
+    width="100%"
+    height="200"
+    style={{ display: "block", border: "none" }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Ink Gallery Tattoo Studio location map"
+  />
   </div>
 </div>
           </div>
