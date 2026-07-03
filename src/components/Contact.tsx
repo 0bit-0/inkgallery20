@@ -113,7 +113,7 @@ const handleSubmit = (e: React.FormEvent) => {
               />
             </div>
             <textarea
-              name="message"
+              name="idea"
               placeholder="Describe your tattoo idea... *"
               aria-label="Tattoo idea"
               rows={5}
